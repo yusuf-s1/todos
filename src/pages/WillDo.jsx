@@ -15,7 +15,9 @@ export default function WillDo({
 }) {
   const navigate = useNavigate();
 
-  const willdoTodos = todos.filter((todo) => todo.list === 'willdo');
+  const willdoTodos = todos.filter(
+    (todo) => todo.completed === false && todo.list === 'willdo'
+  );
 
   return (
     <div className="page">

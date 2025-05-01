@@ -16,6 +16,7 @@ export default function All({
   const navigate = useNavigate();
 
   const allTodos = todos.filter((todo) => todo.completed === false);
+
   return (
     <div className="page">
       <div className="page-layout">

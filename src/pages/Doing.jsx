@@ -15,7 +15,9 @@ export default function Doing({
 }) {
   const navigate = useNavigate();
 
-  const doingTodos = todos.filter((todo) => todo.list === 'doing');
+  const doingTodos = todos.filter(
+    (todo) => todo.completed === false && todo.list === 'doing'
+  );
 
   return (
     <div className="page">

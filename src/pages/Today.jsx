@@ -16,6 +16,7 @@ export default function Today({
   const navigate = useNavigate();
 
   const today = new Date().toISOString().slice(0, 10);
+
   const todaysTodos = todos.filter(
     (todo) => todo.completed === false && todo.id.slice(0, 10) === today
   );
