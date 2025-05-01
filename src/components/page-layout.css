@@ -1,0 +1,88 @@
+.page-layout {
+  max-width: 560px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+}
+
+.back-btn {
+  font-size: 0.868rem;
+  color: blue;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-all {
+  text-align: center;
+  padding: 1rem 0;
+}
+.heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 0.5rem;
+}
+.heading.today {
+  color: blue;
+}
+.heading.all {
+  color: black;
+}
+.heading.completed {
+  color: #323232;
+}
+.heading.flagged {
+  color: orange;
+}
+.heading.willdo {
+  color: rgba(58, 200, 229, 0.85);
+}
+.heading.doing {
+  color: rgba(228, 91, 217, 0.85);
+}
+.todos-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.todos-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.25rem;
+}
+.todos-li .header {
+  flex: 75%;
+  cursor: pointer;
+}
+.todos-li p {
+  display: flex;
+  gap: 0.5rem;
+}
+.todo-delete,
+.todo-flagged {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 560px) {
+  .page {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  .page-layout {
+    width: 560px;
+    height: 75vh;
+    border: 1px solid #eee;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+}
