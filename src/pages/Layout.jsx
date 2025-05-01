@@ -28,10 +28,10 @@ export default function Layout({ header, handleAdd, setHeader, setList }) {
   } */
   return (
     <div className="page">
-      <button className="btn-add" onClick={handleModal}>
-        <MdOutlineEditNote />
-      </button>
       <main>
+        <button className="btn-add" onClick={handleModal}>
+          <MdOutlineEditNote />
+        </button>
         <header>
           <h2 className="header-h">My TODOs</h2>
         </header>
