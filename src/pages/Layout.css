@@ -1,6 +1,7 @@
 main {
   max-width: 560px;
   margin: 0 auto;
+  height: 100%;
   position: relative;
 }
 
