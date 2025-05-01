@@ -11,8 +11,8 @@ A simple and user-friendly ToDo application that helps you stay organized by kee
 
 ## 📷 Screenshots
 
-![App Screenshot](./assets/ss1.png)
-![App Screenshot](./assets/ss2.png)
+![App Screenshot](/assets/ss1.png)
+![App Screenshot](/assets/ss2.png)
 
 ## ⚙️ Built With
 
