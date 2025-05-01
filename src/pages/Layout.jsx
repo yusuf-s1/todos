@@ -28,6 +28,9 @@ export default function Layout({ header, handleAdd, setHeader, setList }) {
   } */
   return (
     <div className="page">
+      <button className="btn-add" onClick={handleModal}>
+        <MdOutlineEditNote />
+      </button>
       <main>
         <header>
           <h2 className="header-h">My TODOs</h2>
@@ -81,9 +84,6 @@ export default function Layout({ header, handleAdd, setHeader, setList }) {
             </li>
           </ul>
         </div>
-        <button className="btn-add" onClick={handleModal}>
-          <MdOutlineEditNote />
-        </button>
         <div className="modal d-none" id="modal">
           <div className="rounded-pill"></div>
           <button className="closeModal" onClick={handleModal}>
