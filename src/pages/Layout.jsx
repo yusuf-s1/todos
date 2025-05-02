@@ -8,7 +8,25 @@ import { MdOutlineEditNote } from 'react-icons/md';
 /* css */
 import './Layout.css';
 
-export default function Layout({ header, handleAdd, setHeader, setList }) {
+export default function Layout({
+  todos,
+  header,
+  handleAdd,
+  setHeader,
+  setList,
+}) {
+  const today = new Date().toISOString().slice(0, 10);
+
+  let todaysTodos = todos.filter(
+    (todo) => todo.completed === false && todo.id.slice(0, 10) === today
+  ).length;
+
+  let allTodos = todos.filter((todo) => todo.completed === false).length;
+
+  let flaggedTodos = todos.filter(
+    (todo) => todo.completed === false && todo.flagged === true
+  ).length;
+
   function handleModal() {
     let modal = document.getElementById('modal');
     if (modal.classList.contains('d-none')) modal.classList.remove('d-none');
@@ -43,14 +61,14 @@ export default function Layout({ header, handleAdd, setHeader, setList }) {
                   <BsCalendar2DateFill className="tag-icon today" />
                   <p>Bugün</p>
                 </div>
-                <p className="btn-col">0</p>
+                <p className="btn-col">{todaysTodos}</p>
               </Link>
               <Link to="/all" className="all">
                 <div className="btn-col">
                   <FaInbox className="tag-icon all" />
                   <p>Tümü</p>
                 </div>
-                <p className="btn-col">0</p>
+                <p className="btn-col">{allTodos}</p>
               </Link>
             </div>
             <div className="col">
@@ -59,7 +77,7 @@ export default function Layout({ header, handleAdd, setHeader, setList }) {
                   <FaFlag className="tag-icon flaged" />
                   <p>Bayraklı</p>
                 </div>
-                <p className="btn-col">0</p>
+                <p className="btn-col">{flaggedTodos}</p>
               </Link>
               <Link to="/completed" className="completed">
                 <div className="btn-col">

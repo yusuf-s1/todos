@@ -106,9 +106,7 @@ function App() {
               todos={todos}
               header={header}
               handleAdd={handleAdd}
-              handleToggle={handleToggle}
               setHeader={setHeader}
-              list={list}
               setList={setList}
             />
           }
